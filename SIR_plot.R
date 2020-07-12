@@ -1,11 +1,9 @@
 library(deSolve)
 library(ggplot2)
 
-#parameters <- c(b = 1/2, k = 1/3)# ƒpƒ‰ƒ[ƒ^‚ÌƒZƒbƒg
-parameters <- c(b =3.60*(1/14), g = 1/14)#WHO‚É‚æ‚é‚ÆŠ´õŠúŠÔ‚Í14“úAR0‚Í“K“–
-initial <- c(s = 1, i = 7.93*10^(-9), r = 0)# “ú–{
-#initial <- c(s = 1, i = 1.27*10^(-6), r = 0)# ‰ŠúðŒ
-times <- seq(1, 240, 1)# ·•ª‚Ý
+parameters <- c(b = 1/2, k = 1/3)# ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ã®ã‚»ãƒƒãƒˆ
+initial <- c(s = 1, i = 1.27*10^(-6), r = 0)# åˆæœŸæ¡ä»¶
+times <- seq(1, 240, 1)# å·®åˆ†åˆ»ã¿
 
 SIR <- function(t, state, parameters) {
   with(as.list(c(state, parameters)), {
