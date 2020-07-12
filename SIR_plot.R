@@ -3,7 +3,7 @@ library(ggplot2)
 
 parameters <- c(b = 1/2, k = 1/3)# パラメータのセット
 initial <- c(s = 1, i = 1.27*10^(-6), r = 0)# 初期条件
-times <- seq(1, 240, 1)# 差分刻み
+times <- seq(1, 180, 1)# 差分刻み
 
 SIR <- function(t, state, parameters) {
   with(as.list(c(state, parameters)), {
